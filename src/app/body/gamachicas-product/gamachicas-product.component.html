@@ -1,0 +1,94 @@
+
+<div class="page-header">
+    <h1>
+        Registrar Nuevo Producto
+    </h1>
+</div>
+<form [formGroup]="formProduct" >
+<div class="container">
+    <fieldset>
+        <div class="control-group">
+            <label for="positionweb">Nombre del producto:</label>
+    
+                <input type="text" class="form-control" id="name" formControlName="productName"
+                required name="name" placeholder="Nombre del producto"  class="form-control">
+
+            <label for="positionweb">Posicion WEB:</label>
+            <input  formControlName="imagenPositionWeb" name="positionWeb" placeholder="Posicion WEB"
+                class="form-control" />
+
+            <label for="CantidadViews">Cantidad Vistas:</label>
+            <input formControlName="imagenCountViews"  name="countViews" placeholder="Cantidad Vistas"
+                class="form-control" />
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="email">Precio al mayor:</label>
+            <input formControlName="priceHigherPrice" name="higherPrice" placeholder="Precio la mayor"
+                class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="email">Precio al menor:</label>
+            <input formControlName="priceSmallerPrice" name="smallerPrice" placeholder="Precio la menor"
+                class="form-control" />
+        </div>
+        <div class="control-group">
+            <label class="control-label">Descripción</label>
+            <div class="controls">
+                <textarea formControlName="productDescription"
+                    placeholder="Dreve descripcion de la imagen caracteristicas "
+                    class="form-control" > </textarea>
+            </div>
+        </div>
+    </fieldset>
+    <br>
+    <div class="control-group">
+        <label class="control-label">Foto Lateral izquierdo</label>
+        <div class="controls">
+            <input class="form-control" type="file" (change)="onFileChange($event)"  multiple="multiple" >
+        </div>
+    </div>
+    <br>
+    <div class="form-group">
+        <button class="btn btn-primary" type="submit" (click)="processForm(formProduct.value)">Guardar</button>
+    </div>
+</div>
+</form>
+<h1>Angular 8 Bootstrap Modal Popup Example</h1>
+   
+<button class="btn btn-lg btn-outline-primary" (click)="open(mymodal)">Open My Modal</button>
+   
+<ng-template #mymodal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Bootstrap Modal</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    This is example from ItSolutionStuff.com
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Ok</button>
+  </div>
+</ng-template>
+
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+<li class="nav-item"><a class="nav-link active" id="home-tab"
+    data-toggle="tab" href="#home" role="tab" aria-controls="home"
+    aria-selected="true">Home</a></li>
+<li class="nav-item"><a class="nav-link" id="profile-tab"
+    data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+    aria-selected="false">Profile</a></li>
+<li class="nav-item"><a class="nav-link" id="contact-tab"
+    data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+    aria-selected="false">Contact</a></li>
+</ul>
+<div class="tab-content" id="myTabContent">
+<div class="tab-pane fade show active" id="home" role="tabpanel"
+    aria-labelledby="home-tab">.rwerwerew..</div>
+<div class="tab-pane fade" id="profile" role="tabpanel"
+    aria-labelledby="profile-tab">...</div>
+<div class="tab-pane fade" id="contact" role="tabpanel"
+    aria-labelledby="contact-tab">...</div>
+</div>
