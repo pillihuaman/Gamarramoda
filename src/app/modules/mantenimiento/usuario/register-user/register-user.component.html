@@ -1,0 +1,33 @@
+
+<div class="card">
+    <h5>Vertical</h5>
+    <div class="p-fluid">
+        <div class="p-field">
+            <label for="firstname1">Firstname</label>
+            <input id="firstname1" type="text" pInputText> 
+        </div>
+        <div class="p-field">
+            <label for="lastname1">Lastname</label>
+            <input id="lastname1" type="text" pInputText> 
+        </div>
+    </div>
+</div>
+
+<p-table [value]="products">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Nombre</th>
+            <th>Descripcion</th>
+            <th>IdPrecio</th>
+        
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-product>
+        <tr>
+            <td>{{product.name}}</td>
+            <td>{{product.description}}</td>
+            <td>{{product.idPrice}}</td>
+       
+        </tr>
+    </ng-template>
+</p-table>
